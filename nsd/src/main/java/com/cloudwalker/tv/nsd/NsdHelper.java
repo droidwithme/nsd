@@ -133,6 +133,10 @@ public class NsdHelper implements DiscoveryTimer.OnTimeoutListener {
         return mDiscoveryServiceName;
     }
 
+    public void setDiscoveryServiceName(String serviceName) {
+        mDiscoveryServiceName = serviceName;
+    }
+
 
     public void startDiscovery(String serviceType) {
         startDiscovery(serviceType, null);

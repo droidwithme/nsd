@@ -36,7 +36,7 @@ class NsdListenerDiscovery implements android.net.nsd.NsdManager.DiscoveryListen
     public void onServiceFound(NsdServiceInfo serviceInfo) {
         if (serviceInfo.getServiceType().equals(mNsdHelper.getDiscoveryServiceType())) {
             if (!serviceInfo.getServiceName().equals(mNsdHelper.getRegisteredServiceInfo().getServiceName())) {
-                if (mNsdHelper.getDiscoveryServiceName() == null || serviceInfo.getServiceName().toLowerCase().equals(mNsdHelper.getDiscoveryServiceName().toLowerCase())) {
+                if (mNsdHelper.getDiscoveryServiceName() == null || serviceInfo.getServiceName().toLowerCase().startsWith(mNsdHelper.getDiscoveryServiceName().toLowerCase())) {
                     mNsdHelper.logMsg("Service found -> " + serviceInfo.getServiceName());
                     mNsdHelper.onNsdServiceFound(serviceInfo);
                 }

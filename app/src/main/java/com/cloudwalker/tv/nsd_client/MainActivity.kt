@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), NsdListener {
         nsdHelper = NsdHelper(this, this)
         nsdHelper?.isAutoResolveEnabled = true
         nsdHelper?.isLogEnabled = true
+        nsdHelper?.ser
         nsdHelper?.startDiscovery(NsdType.HTTP)
 
     }
