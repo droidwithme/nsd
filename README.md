@@ -3,6 +3,8 @@ simple communication with NSD services
 
 Sample Activity
 
+
+
 class MainActivity : AppCompatActivity(), NsdListener {
 
     val TAG = "MainActivity"
