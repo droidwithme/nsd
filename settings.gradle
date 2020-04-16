@@ -1,2 +1,2 @@
-rootProject.name='nsd'
+rootProject.name='nsd-client'
 include ':app', ':nsd'
